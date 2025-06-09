@@ -1,0 +1,91 @@
+@mixin grid-center {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+// MEDIA QUERIES
+@mixin respond($breakpoint) {
+  //475px
+  @if $breakpoint == small-phone {
+    @media only screen and (min-width: 29.69em) {
+      @content;
+    }
+  }
+
+  // 600px
+  @if $breakpoint == phone {
+    @media only screen and (min-width: 37.5em) {
+      @content;
+    }
+  }
+
+  // 900px
+  @if $breakpoint == tab-port {
+    @media only screen and (min-width: 56.25em) {
+      @content;
+    }
+  }
+
+  // 1200px
+  @if $breakpoint == tab-land {
+    @media only screen and (min-width: 75em) {
+      @content;
+    }
+  }
+  // 1800px
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+// ✅ Dugme (podesivo)
+@mixin button($bg-color, $text-color) {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: $bg-color;
+  color: $text-color;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+// ✅ Tekst stil (naslovi, itd.)
+@mixin heading-style($size, $weight: 700, $color: #333) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  font-family: $font-family-heading;
+}
+
+// ✅ Card stil (sa senkom i border-radius)
+@mixin card-style($radius: 12px, $shadow: 0 4px 12px rgba(0, 0, 0, 0.1)) {
+  border-radius: $radius;
+  box-shadow: $shadow;
+  background-color: #fff;
+  padding: 1.5rem;
+}
+
+// ✅ Responzivni breakpointi
+// @mixin respond($breakpoint) {
+//   @if $breakpoint == small {
+//     @media (max-width: 600px) {
+//       @content;
+//     }
+//   } @else if $breakpoint == medium {
+//     @media (max-width: 900px) {
+//       @content;
+//     }
+//   } @else if $breakpoint == large {
+//     @media (max-width: 1200px) {
+//       @content;
+//     }
+//   }
+// }

@@ -1,0 +1,38 @@
+.services {
+  grid-column: full-start/full-end;
+  margin: $section-medium-space;
+
+  &__divider {
+    grid-column: 2 / span 1;
+    background-image: url("../../img/services_divider.png");
+  }
+
+  &__heading {
+    grid-column: 2 / span 1;
+  }
+
+  &__box {
+    grid-column: 2 / span 1;
+    margin: 3.2rem 0;
+
+    display: grid;
+    justify-items: center;
+    text-align: center;
+  }
+
+  &__img {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+
+  // &__text {
+  //   // text-align: center;
+  //   // line-height: 1.2;
+  // }
+}

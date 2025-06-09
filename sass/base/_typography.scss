@@ -1,0 +1,51 @@
+.heading {
+  font-family: "Lobster", sans-serif;
+
+  &__large {
+    font-size: $font-heading;
+    margin: 2rem 0;
+    text-shadow: $text-shadow;
+
+    &--dark {
+      color: $color-primary;
+    }
+
+    &--white {
+      color: $color-white;
+    }
+  }
+
+  &__small {
+    font-size: $font-heading-small;
+    color: $color-primary;
+    font-weight: 400;
+    margin: 1rem 0;
+
+    &--white {
+      color: $color-white;
+    }
+  }
+}
+
+.text {
+  font-family: "Oswald", sans-serif;
+
+  line-height: 22px;
+
+  &__base {
+    font-size: $font-size-base;
+
+    &--light {
+      color: $color-secondary;
+      font-weight: 300;
+    }
+
+    &--white {
+      color: $color-white;
+    }
+  }
+
+  &__small {
+    font-size: $font-size-small;
+  }
+}

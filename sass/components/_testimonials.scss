@@ -1,0 +1,31 @@
+.testimonials {
+  grid-column: full-start/full-end;
+  background-image: url(../../img/bg-pink.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: $section-medium-space;
+
+  &__box {
+    grid-column: 2 / span 1;
+    text-align: center;
+  }
+
+  &__heading {
+    text-shadow: $text-shadow-pink;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-weight: 300;
+    padding: 0 1rem 0;
+  }
+
+  &__divider {
+    border-bottom: 1px solid $color-white;
+    width: 60%;
+    margin: 2rem 0;
+
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}

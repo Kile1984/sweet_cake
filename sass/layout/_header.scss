@@ -1,0 +1,46 @@
+.header {
+  grid-column: center-start/center-end;
+}
+
+.nav {
+  &__list {
+    grid-template-rows: repeat(9, min-content);
+
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__item {
+    border-bottom: 1px dashed #d6d5d5;
+    padding: 2rem;
+  }
+
+  &__link,
+  &:active,
+  &:visited {
+    font-family: $font-lobster;
+    font-size: $font-heading-small;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    text-shadow: $text-shadow;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__link-logo {
+    img {
+      width: 180px;
+      transition: all 0.3s;
+    }
+
+    &:hover img {
+      transform: scale(1.01);
+    }
+  }
+}

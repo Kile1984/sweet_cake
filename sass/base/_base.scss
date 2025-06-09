@@ -1,0 +1,32 @@
+// SPACING SYSTEM (px)
+
+// 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+// FONT SIZE SYSTEM (px)
+
+// 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1rem=10px
+}
+
+.container {
+  grid-template-columns:
+    [full-start] 2fr [center-start] repeat(6, [col-start] 1fr [col-end])
+    [center-end] 2fr [full-end];
+}
+
+.divider {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  margin: 2rem 0 4rem 0;
+  background-size: 580px;
+  height: 30px;
+}
