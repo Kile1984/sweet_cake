@@ -1,4 +1,74 @@
 .works {
   grid-column: center-start/center-end;
-  background-color: olivedrab;
+  margin: $section-medium-space;
+
+  &__heading {
+    grid-column: 1/-1;
+  }
+
+  &__divider {
+    grid-column: 1 / -1;
+    background-image: url("../../img/my_works_divider.png");
+  }
+
+  &__button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2.4rem;
+  }
+
+  // &__btn {
+  // }
+
+  // &__image-gallery {
+  // }
+
+  &__figure {
+    text-align: center;
+    transition: rotate 0.3s;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 2.2rem;
+    }
+
+    &:hover .works__caption img {
+      transform: translateX(-50%) rotate(360deg);
+    }
+    &:hover .works__img {
+      transform: scale(1.2);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    transition: all 1s;
+    display: block;
+  }
+
+  &__caption {
+    background-color: $bg-white-light;
+    position: relative;
+    padding-top: 1.6rem;
+
+    img {
+      width: 50px;
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%) rotate(0);
+      transition: transform 0.5s ease;
+    }
+  }
+
+  &__text {
+    margin-bottom: 1.2rem;
+  }
+
+  &__border-bottom {
+    background-image: url(../../img/progresbar.jpg);
+    height: 4px;
+    width: 100%;
+  }
 }

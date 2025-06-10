@@ -1,0 +1,40 @@
+.btn {
+  font-family: $font-oswald;
+  font-size: $font-size-base;
+  color: $color-white;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: navajowhite;
+  padding: 0.8rem 1.4rem;
+  margin: 1rem;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &--pink {
+    background-color: $bg-pink-light;
+    border-bottom: 2px solid #eec0bf;
+  }
+
+  &--aquablue {
+    background-color: $bg-blue-light;
+    border-bottom: 2px solid #94d6d5;
+  }
+
+  &--yellow {
+    background-color: $bg-yellow-light;
+    border-bottom: 2px solid #dbd28f;
+  }
+
+  &--blue {
+    background-color: $bg-blue-pastel;
+    border-bottom: 2px solid #81c2ba;
+  }
+
+  &--green {
+    background-color: $bg-green-light;
+    border-bottom: 2px solid #b4d898;
+  }
+}

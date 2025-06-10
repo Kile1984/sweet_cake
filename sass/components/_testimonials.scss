@@ -4,6 +4,21 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: $section-medium-space;
+  position: relative;
+
+  &__topquote {
+    width: 50px;
+    grid-column: 2 / span 1;
+    margin-bottom: 1rem;
+  }
+
+  &__bottomquote {
+    width: 50px;
+    grid-row: 5 / span 1;
+    grid-column: 2 / span 1;
+    justify-self: end;
+    margin-top: 1rem;
+  }
 
   &__box {
     grid-column: 2 / span 1;
