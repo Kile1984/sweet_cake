@@ -128,6 +128,19 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 6.4rem 0;
+  position: relative;
+}
+.testimonials__topquote {
+  width: 50px;
+  grid-column: 2/span 1;
+  margin-bottom: 1rem;
+}
+.testimonials__bottomquote {
+  width: 50px;
+  grid-row: 5/span 1;
+  grid-column: 2/span 1;
+  justify-self: end;
+  margin-top: 1rem;
 }
 .testimonials__box {
   grid-column: 2/span 1;
@@ -151,7 +164,95 @@ html {
 
 .works {
   grid-column: center-start/center-end;
-  background-color: olivedrab;
+  margin: 6.4rem 0;
+}
+.works__heading {
+  grid-column: 1/-1;
+}
+.works__divider {
+  grid-column: 1/-1;
+  background-image: url("../../img/my_works_divider.png");
+}
+.works__button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+}
+.works__figure {
+  text-align: center;
+  transition: rotate 0.3s;
+  overflow: hidden;
+}
+.works__figure:not(:last-child) {
+  margin-bottom: 2.2rem;
+}
+.works__figure:hover .works__caption img {
+  transform: translateX(-50%) rotate(360deg);
+}
+.works__figure:hover .works__img {
+  transform: scale(1.2);
+}
+.works__img {
+  width: 100%;
+  transition: all 1s;
+  display: block;
+}
+.works__caption {
+  background-color: #f5f5f5;
+  position: relative;
+  padding-top: 1.6rem;
+}
+.works__caption img {
+  width: 50px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%) rotate(0);
+  transition: transform 0.5s ease;
+}
+.works__text {
+  margin-bottom: 1.2rem;
+}
+.works__border-bottom {
+  background-image: url(../../img/progresbar.jpg);
+  height: 4px;
+  width: 100%;
+}
+
+.btn {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.7rem;
+  color: #fff;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: navajowhite;
+  padding: 0.8rem 1.4rem;
+  margin: 1rem;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn--pink {
+  background-color: #e0a6a5;
+  border-bottom: 2px solid #eec0bf;
+}
+.btn--aquablue {
+  background-color: #a5dce1;
+  border-bottom: 2px solid #94d6d5;
+}
+.btn--yellow {
+  background-color: #e0d9a3;
+  border-bottom: 2px solid #dbd28f;
+}
+.btn--blue {
+  background-color: #94cdc6;
+  border-bottom: 2px solid #81c2ba;
+}
+.btn--green {
+  background-color: #bfe1a4;
+  border-bottom: 2px solid #b4d898;
 }
 
 .pricing {
