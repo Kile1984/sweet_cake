@@ -1,4 +1,114 @@
 .pricing {
   grid-column: full-start/full-end;
-  background-color: silver;
+  background-image: url(../../img/bg_green.png);
+  padding: $section-medium-space;
+
+  &__heading {
+    grid-column: 2 / span 1;
+    justify-self: center;
+    text-shadow: $text-shadow-green;
+  }
+
+  &__divider {
+    grid-column: 2 / span 1;
+    background-image: url("../../img/prices_divider.png");
+    margin-bottom: 12rem;
+  }
+
+  &__box {
+    grid-column: 2 / span 1;
+
+    display: grid;
+    justify-items: center;
+    transition: all 0.3s;
+
+    &:not(:last-child) {
+      margin-bottom: 16rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:hover .pricing__img img {
+      transform: translateY(-50%) rotate(360deg);
+    }
+  }
+
+  &__img {
+    background-color: $bg-white-gray;
+    width: 100%;
+    height: 110px;
+    text-align: center;
+
+    img {
+      width: 16rem;
+      transform: translateY(-50%);
+      transition: all 0.5s;
+    }
+  }
+  &__price {
+    font-size: 2.4rem;
+    text-align: center;
+    background-image: url(../../img/bgribbon.jpg);
+    background-size: contain;
+    padding: 1.8rem 0;
+    width: 100%;
+  }
+  &__number {
+    font-size: inherit;
+    font-family: $font-lobster;
+    text-shadow: $text-shadow-green;
+  }
+
+  &__text {
+    font-size: inherit;
+    font-family: $font-lobster;
+  }
+
+  &__info {
+    background-color: $bg-white-gray;
+    width: 100%;
+    clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+
+    display: grid;
+
+    &-text {
+      padding: 2rem 0;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0 2rem;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid $color-secondary;
+    }
+
+    &:before {
+      content: "";
+      background-image: url("../../img/star.png");
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      transform: scale(0.5);
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    justify-self: center;
+    padding: 3rem 0 8rem 0;
+  }
 }
