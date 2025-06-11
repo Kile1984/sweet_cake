@@ -97,6 +97,10 @@ html {
   grid-template-columns: 6rem 2fr 6rem;
 }
 
+.flex {
+  display: flex;
+}
+
 .services {
   grid-column: full-start/full-end;
   margin: 6.4rem 0;
@@ -327,7 +331,7 @@ html {
 }
 .pricing__list {
   list-style-type: none;
-  padding: 0 2rem;
+  padding: 0 2.4rem;
   margin: 0;
 }
 .pricing__item {
@@ -337,7 +341,7 @@ html {
 }
 .pricing__item:not(:last-child) {
   margin-bottom: 1rem;
-  border-bottom: 1px solid #a9a9a9;
+  border-bottom: 1px solid rgba(169, 169, 169, 0.3);
 }
 .pricing__item:before {
   content: "";
@@ -357,7 +361,52 @@ html {
 
 .team {
   grid-column: center-start/center-end;
-  background-color: orangered;
+}
+.team__divider {
+  background-image: url(../../img/our_team_divider.png);
+}
+.team__box:not(:last-child) {
+  margin-bottom: 4.6rem;
+}
+.team__info {
+  background-color: #eef1ec;
+  margin-bottom: 0.6rem;
+  border: 1px solid #e8e8e8;
+  padding: 4.8rem 2.4rem;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+}
+.team__img {
+  width: 80%;
+  transition: all 0.3s;
+}
+.team__img:hover {
+  filter: brightness(1.1);
+}
+.team__heading {
+  margin: 2rem;
+}
+.team__social {
+  width: 100%;
+  background-color: #eef1ec;
+  justify-content: center;
+  gap: 1rem;
+  border: 1px solid #e8e8e8;
+}
+.team__icon {
+  width: 50px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.team__icon:hover {
+  transform: translateY(-50%) rotate(360deg);
+}
+.team__border-bottom {
+  background-image: url(../../img/progresbar.jpg);
+  height: 4px;
+  width: 100%;
 }
 
 .skills {
