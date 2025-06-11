@@ -80,7 +80,7 @@
 
   &__list {
     list-style-type: none;
-    padding: 0 2rem;
+    padding: 0 2.4rem;
     margin: 0;
   }
 
@@ -91,7 +91,7 @@
 
     &:not(:last-child) {
       margin-bottom: 1rem;
-      border-bottom: 1px solid $color-secondary;
+      border-bottom: 1px solid rgba($color-secondary, 0.3);
     }
 
     &:before {

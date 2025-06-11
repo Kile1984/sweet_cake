@@ -1,4 +1,65 @@
 .team {
   grid-column: center-start/center-end;
-  background-color: orangered;
+
+  &__divider {
+    background-image: url(../../img/our_team_divider.png);
+  }
+
+  &__box {
+    &:not(:last-child) {
+      margin-bottom: 4.6rem;
+    }
+  }
+
+  &__info {
+    background-color: $bg-white-gray;
+    margin-bottom: 0.6rem;
+    border: 1px solid #e8e8e8;
+    padding: 4.8rem 2.4rem;
+    text-align: center;
+
+    display: grid;
+    justify-items: center;
+  }
+
+  &__img {
+    width: 80%;
+    transition: all 0.3s;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+
+  &__heading {
+    margin: 2rem;
+  }
+
+  &__text {
+  }
+
+  &__social {
+    width: 100%;
+    background-color: $bg-white-gray;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid #e8e8e8;
+  }
+
+  &__icon {
+    width: 50px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      transform: translateY(-50%) rotate(360deg);
+    }
+  }
+
+  &__border-bottom {
+    background-image: url(../../img/progresbar.jpg);
+    height: 4px;
+    width: 100%;
+  }
 }
