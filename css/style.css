@@ -60,6 +60,9 @@ html {
 .text__base--white {
   color: #fff;
 }
+.text__base--dark {
+  color: #7d7d7d;
+}
 .text__small {
   font-size: 1.2rem;
 }
@@ -185,7 +188,7 @@ html {
   overflow: hidden;
 }
 .works__figure:not(:last-child) {
-  margin-bottom: 2.2rem;
+  margin-bottom: 3.2rem;
 }
 .works__figure:hover .works__caption img {
   transform: translateX(-50%) rotate(360deg);
@@ -257,7 +260,99 @@ html {
 
 .pricing {
   grid-column: full-start/full-end;
-  background-color: silver;
+  background-image: url(../../img/bg_green.png);
+  padding: 6.4rem 0;
+}
+.pricing__heading {
+  grid-column: 2/span 1;
+  justify-self: center;
+  text-shadow: 3px 3px 0 rgba(111, 176, 167, 0.9);
+}
+.pricing__divider {
+  grid-column: 2/span 1;
+  background-image: url("../../img/prices_divider.png");
+  margin-bottom: 12rem;
+}
+.pricing__box {
+  grid-column: 2/span 1;
+  display: grid;
+  justify-items: center;
+  transition: all 0.3s;
+}
+.pricing__box:not(:last-child) {
+  margin-bottom: 16rem;
+}
+.pricing__box:hover {
+  transform: scale(1.05);
+}
+.pricing__box:hover .pricing__img img {
+  transform: translateY(-50%) rotate(360deg);
+}
+.pricing__img {
+  background-color: #eef1ec;
+  width: 100%;
+  height: 110px;
+  text-align: center;
+}
+.pricing__img img {
+  width: 16rem;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+}
+.pricing__price {
+  font-size: 2.4rem;
+  text-align: center;
+  background-image: url(../../img/bgribbon.jpg);
+  background-size: contain;
+  padding: 1.8rem 0;
+  width: 100%;
+}
+.pricing__number {
+  font-size: inherit;
+  font-family: "Lobster", sans-serif;
+  text-shadow: 3px 3px 0 rgba(111, 176, 167, 0.9);
+}
+.pricing__text {
+  font-size: inherit;
+  font-family: "Lobster", sans-serif;
+}
+.pricing__info {
+  background-color: #eef1ec;
+  width: 100%;
+  clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+  display: grid;
+}
+.pricing__info-text {
+  padding: 2rem 0;
+}
+.pricing__list {
+  list-style-type: none;
+  padding: 0 2rem;
+  margin: 0;
+}
+.pricing__item {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0;
+}
+.pricing__item:not(:last-child) {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #a9a9a9;
+}
+.pricing__item:before {
+  content: "";
+  background-image: url("../../img/star.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transform: scale(0.5);
+  margin-right: 0.5rem;
+}
+.pricing__link {
+  display: inline-block;
+  justify-self: center;
+  padding: 3rem 0 8rem 0;
 }
 
 .team {
