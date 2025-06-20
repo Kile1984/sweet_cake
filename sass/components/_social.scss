@@ -1,4 +1,48 @@
 .social {
   grid-column: full-start/full-end;
-  background-color: blueviolet;
+  margin: $section-big-space;
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2.4rem;
+  }
+
+  &__heading {
+    grid-column: 2 / span 1;
+
+    @include respond(tab-port) {
+      grid-column: 1/ -1;
+    }
+  }
+
+  &__divider {
+    grid-column: 2 / span 1;
+    background-image: url("../../img/followus_divider.png");
+
+    @include respond(tab-port) {
+      grid-column: 1/ -1;
+    }
+  }
+
+  &__link {
+    grid-column: 2 / span 1;
+    justify-self: center;
+    margin-bottom: 1.6rem;
+    transition: 0.5s;
+
+    @include respond(tab-port) {
+      grid-column: auto;
+    }
+
+    @include respond(tab-land) {
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
+
+    img {
+      width: 112px;
+      height: 112px;
+    }
+  }
 }

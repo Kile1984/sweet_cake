@@ -51,5 +51,9 @@
 
   &__small {
     font-size: $font-size-small;
+
+    &--light {
+      color: $color-secondary;
+    }
   }
 }

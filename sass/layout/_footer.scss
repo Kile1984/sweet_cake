@@ -1,4 +1,99 @@
 .footer {
   grid-column: full-start/full-end;
-  background-color: orange;
+  grid-template-columns: 1fr max-content 1fr;
+
+  &__marker {
+    grid-column: 2 / span 1;
+    grid-row: 1/-1;
+    background-image: url(../../img/bigmarker.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 380px;
+    height: 480px;
+    padding-top: 6.2rem;
+    padding-bottom: 1.6rem;
+
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    text-align: center;
+
+    img {
+      grid-column: 2/-1;
+      justify-self: center;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    padding: 0 1.6rem;
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px dotted $color-secondary;
+      margin-bottom: 1.2rem;
+    }
+
+    &--primary {
+      &::before {
+        background-image: url(../../img/icon_home.png);
+      }
+    }
+
+    &--secondary {
+      &::before {
+        background-image: url(../../img/icon_phone.png);
+      }
+    }
+    &--tertiary {
+      &::before {
+        background-image: url(../../img/icon_fax.png);
+      }
+    }
+
+    &--quaternary {
+      &::before {
+        background-image: url(../../img/icon_mail.png);
+      }
+    }
+
+    &::before {
+      content: "";
+
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      transform: scale(0.5);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__img {
+    grid-column: 2 / span 1;
+    justify-self: center;
+    grid-row: 1/-1;
+    align-self: end;
+
+    width: 60px;
+    height: 60px;
+    display: block;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
 }

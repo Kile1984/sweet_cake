@@ -6,10 +6,36 @@
   padding: $section-medium-space;
   position: relative;
 
+  grid-template-columns: 2rem repeat(6, 1fr) 2rem;
+
+  @include respond(phone) {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: 4rem repeat(6, 1fr) 4rem;
+  }
+
+  @include respond(big-desktop) {
+    grid-template-columns: 8rem repeat(6, 1fr) 8rem;
+  }
+
+  &__wrapp {
+    grid-column: 2 / span 6;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   &__topquote {
     width: 50px;
     grid-column: 2 / span 1;
     margin-bottom: 1rem;
+
+    @include respond(tab-port) {
+      grid-column: 1 / span 1;
+    }
   }
 
   &__bottomquote {
@@ -23,6 +49,19 @@
   &__box {
     grid-column: 2 / span 1;
     text-align: center;
+
+    @include respond(tab-port) {
+      padding: 1.4rem;
+
+      &--left {
+        grid-column: 1 / span 1;
+        text-align: right;
+      }
+      &--right {
+        grid-column: 2 / span 1;
+        text-align: left;
+      }
+    }
   }
 
   &__heading {
@@ -32,15 +71,18 @@
 
   &__text {
     font-weight: 300;
-    padding: 0 1rem 0;
   }
 
   &__divider {
     border-bottom: 1px solid $color-white;
-    width: 60%;
+    width: 100%;
     margin: 2rem 0;
 
-    grid-column: 1 / -1;
+    grid-column: 2 / span 1;
     justify-self: center;
+
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 }

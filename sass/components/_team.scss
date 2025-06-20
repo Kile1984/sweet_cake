@@ -1,13 +1,32 @@
 .team {
   grid-column: center-start/center-end;
+  margin: $section-big-space;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+  }
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   &__divider {
     background-image: url(../../img/our_team_divider.png);
+    grid-column: 1/-1;
   }
 
   &__box {
     &:not(:last-child) {
       margin-bottom: 4.6rem;
+
+      @include respond(tab-port) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -25,17 +44,11 @@
   &__img {
     width: 80%;
     transition: all 0.3s;
+    margin-bottom: 2.4rem;
 
     &:hover {
       filter: brightness(1.1);
     }
-  }
-
-  &__heading {
-    margin: 2rem;
-  }
-
-  &__text {
   }
 
   &__social {
@@ -46,14 +59,44 @@
     border: 1px solid #e8e8e8;
   }
 
-  &__icon {
+  // &__icon {
+  //   width: 50px;
+  //   transform: translateY(-50%);
+  //   cursor: pointer;
+  //   transition: 0.5s;
+
+  //   &:hover {
+  //     transform: translateY(-50%) rotate(360deg);
+  //   }
+  // }
+
+  .team__icon {
     width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-size: contain;
+    // background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 0.5rem;
+
     transform: translateY(-50%);
     cursor: pointer;
     transition: 0.5s;
 
     &:hover {
       transform: translateY(-50%) rotate(360deg);
+    }
+
+    &--twitter {
+      background-image: url("../img/twitter_small.png");
+    }
+
+    &--instagram {
+      background-image: url("../img/instagram_small.png");
+    }
+
+    &--youtube {
+      background-image: url("../img/youtube_small.png");
     }
   }
 

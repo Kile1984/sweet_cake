@@ -21,6 +21,24 @@ html {
   grid-template-columns:
     [full-start] 2rem [center-start] repeat(6, [col-start] 1fr [col-end])
     [center-end] 2rem [full-end];
+
+  @include respond(phone) {
+    grid-template-columns:
+      [full-start] 1fr [center-start] repeat(6, [col-start] 1fr [col-end])
+      [center-end] 1fr [full-end];
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns:
+      [full-start] 4rem [center-start] repeat(6, [col-start] 1fr [col-end])
+      [center-end] 4rem [full-end];
+  }
+
+  @include respond(big-desktop) {
+    grid-template-columns:
+      [full-start] 8rem [center-start] repeat(6, [col-start] 1fr [col-end])
+      [center-end] 8rem [full-end];
+  }
 }
 
 .divider {

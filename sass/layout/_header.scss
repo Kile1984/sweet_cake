@@ -10,16 +10,68 @@
     padding: 0;
     margin: 0;
     text-align: center;
+
+    @include respond(tab-land) {
+      grid-template-rows: repeat(3, min-content);
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    @include respond(big-desktop) {
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(9, 1fr);
+    }
   }
 
   &__item {
     border-bottom: 1px dashed #d6d5d5;
     padding: 2rem;
+
+    @include respond(tab-land) {
+      align-self: start;
+      margin: 0.8rem;
+      padding: 2rem 0;
+      border-top: 1px dashed #d6d5d5;
+    }
+
+    &-row-1 {
+      @include respond(tab-land) {
+        grid-row: 1 / span 1;
+      }
+
+      @include respond(big-desktop) {
+        grid-row: auto;
+        align-self: center;
+        transform: translateY(-50%);
+      }
+    }
+    &-row-2 {
+      @include respond(tab-land) {
+        grid-row: 2 / span 1;
+      }
+
+      @include respond(big-desktop) {
+        grid-row: auto;
+        align-self: center;
+        transform: translateY(-50%);
+      }
+    }
+
+    &-logo {
+      @include respond(tab-land) {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 2;
+        border: none;
+      }
+
+      @include respond(big-desktop) {
+        grid-column: 5 / span 1;
+      }
+    }
   }
 
   &__link,
-  &:active,
-  &:visited {
+  &__link:active,
+  &__link:visited {
     font-family: $font-lobster;
     font-size: $font-heading-small;
     color: $color-primary;
@@ -37,6 +89,14 @@
     img {
       width: 180px;
       transition: all 0.3s;
+
+      @include respond(tab-port) {
+        width: 100px;
+      }
+
+      @include respond(big-desktop) {
+        width: 180px;
+      }
     }
 
     &:hover img {

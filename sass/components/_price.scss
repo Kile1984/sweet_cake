@@ -3,35 +3,65 @@
   background-image: url(../../img/bg_green.png);
   padding: $section-medium-space;
 
+  grid-template-columns: 2rem repeat(6, 1fr) 2rem;
+
+  @include respond(phone) {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: 4rem repeat(6, 1fr) 4rem;
+  }
+
+  @include respond(big-desktop) {
+    grid-template-columns: 8rem repeat(6, 1fr) 8rem;
+  }
+
+  &__wrapp {
+    grid-column: 2 / span 6;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.4rem;
+    }
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.4rem;
+    }
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
   &__heading {
-    grid-column: 2 / span 1;
+    grid-column: 1/ -1;
     justify-self: center;
     text-shadow: $text-shadow-green;
   }
 
   &__divider {
-    grid-column: 2 / span 1;
+    grid-column: 1/ -1;
     background-image: url("../../img/prices_divider.png");
     margin-bottom: 12rem;
   }
 
   &__box {
-    grid-column: 2 / span 1;
-
-    display: grid;
-    justify-items: center;
     transition: all 0.3s;
 
     &:not(:last-child) {
       margin-bottom: 16rem;
     }
 
-    &:hover {
-      transform: scale(1.05);
-    }
+    @include respond(tab-land) {
+      &:hover {
+        transform: scale(1.05);
+      }
 
-    &:hover .pricing__img img {
-      transform: translateY(-50%) rotate(360deg);
+      &:hover .pricing__img img {
+        transform: translateY(-50%) rotate(360deg);
+      }
     }
   }
 
@@ -73,6 +103,10 @@
 
     display: grid;
 
+    @include respond(tab-port) {
+      clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    }
+
     &-text {
       padding: 2rem 0;
     }
@@ -107,8 +141,9 @@
   }
 
   &__link {
+    font-family: $font-lobster;
     display: inline-block;
     justify-self: center;
-    padding: 3rem 0 8rem 0;
+    margin: 3rem 0 8rem 0;
   }
 }
