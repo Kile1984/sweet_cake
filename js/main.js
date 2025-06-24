@@ -34,11 +34,12 @@ const smoothScrollObserver = new IntersectionObserver(
         const activeLink = document.querySelector(`a[href="#${id}"]`);
 
         if (activeLink) activeLink.classList.add("active");
+        console.log(activeLink);
       }
     });
   },
   {
-    threshold: 0.01,
+    threshold: 0.4,
   }
 );
 
