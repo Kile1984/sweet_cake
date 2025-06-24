@@ -159,3 +159,13 @@ buttons.forEach((btn) => {
     });
   });
 });
+
+// scroll to top
+const arrowTop = document.querySelector(".footer__img");
+
+arrowTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
