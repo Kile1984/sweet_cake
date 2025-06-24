@@ -338,18 +338,17 @@ section .observe.visible {
   transition: rotate 0.3s;
   overflow: hidden;
 }
-.works__figure__figure.show {
+.works__figure.show {
   transition: all 0.5s;
   opacity: 1;
   visibility: visible;
-  animation: fadeInUp 0.5s ease forwards;
   transform: translateY(0);
 }
-.works__figure__figure.hide {
+.works__figure.hide {
   transition: all 0.5s;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(100%);
+  transform: translateY(-100%);
   pointer-events: none;
 }
 @media only screen and (min-width: 56.25em) {
