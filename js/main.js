@@ -141,15 +141,13 @@ buttons.forEach((btn) => {
 
     allFigure.forEach((fig) => {
       const type = fig.dataset.type;
-      console.log(type);
-
       fig.classList.add("hide");
 
       setTimeout(() => {
         fig.style.display = "none";
       }, 100);
 
-      if (selectedType === type || selectedType === "all") {
+      if (selectedType === type) {
         console.log(fig);
         fig.classList.add("show");
         fig.classList.remove("hide");
