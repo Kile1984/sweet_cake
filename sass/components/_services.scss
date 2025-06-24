@@ -28,7 +28,10 @@
 
   &__box {
     grid-column: 2 / span 1;
-    margin: 3.2rem 0;
+
+    &:not(:last-child) {
+      margin-bottom: 3.2rem;
+    }
 
     display: grid;
     justify-items: center;
@@ -71,8 +74,6 @@
   }
 
   &__text {
-    // text-align: center;
-    // line-height: 1.2;
     @include respond(big-desktop) {
       grid-column: 2 / span 1;
     }

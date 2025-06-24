@@ -51,7 +51,7 @@
     text-align: center;
 
     @include respond(tab-port) {
-      padding: 1.4rem;
+      padding: 0 1.4rem;
 
       &--left {
         grid-column: 1 / span 1;

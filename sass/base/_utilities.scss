@@ -18,27 +18,12 @@
   grid-template-columns: 1fr;
 }
 
-.col-2 {
-  @include respond(tab-port) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .col-3-center {
   grid-template-columns: 2rem 2fr 2rem;
 }
 
-.flex {
-  display: flex;
+.mb-tab-port {
+  @include respond(tab-port) {
+    margin: 0 !important;
+  }
 }
-
-.w-100 {
-  width: 100px;
-}
-// .column-4 {
-//   grid-template-columns: repeat(3, 1fr);
-// }
-
-// .grid-auto-fill {
-//   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-// }

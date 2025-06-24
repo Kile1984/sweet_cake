@@ -24,12 +24,15 @@
 
   &__item {
     border-bottom: 1px dashed #d6d5d5;
-    padding: 2rem;
+    padding: 2rem 0;
 
     @include respond(tab-land) {
       align-self: start;
       margin: 0.8rem;
       padding: 2rem 0;
+    }
+
+    @include respond(big-desktop) {
       border-top: 1px dashed #d6d5d5;
     }
 

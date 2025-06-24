@@ -15,6 +15,7 @@
 
 html {
   font-size: 62.5%; //1rem=10px
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -47,4 +48,19 @@ html {
   margin: 2rem 0 4rem 0;
   background-size: 580px;
   height: 30px;
+}
+
+section .observe {
+  opacity: 0;
+  transform: translateY(20px) scale(0.1);
+  transition: all 0.5s 0.3s;
+}
+
+section .observe.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.nav__link.active {
+  opacity: 0.5;
 }

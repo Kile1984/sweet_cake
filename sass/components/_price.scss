@@ -30,7 +30,7 @@
       gap: 2.4rem;
     }
 
-    @include respond(tab-land) {
+    @include respond(big-desktop) {
       grid-template-columns: repeat(4, 1fr);
     }
   }
@@ -51,7 +51,11 @@
     transition: all 0.3s;
 
     &:not(:last-child) {
-      margin-bottom: 16rem;
+      margin-bottom: 12rem;
+
+      @include respond(tab-land) {
+        margin: 0 0 8rem 0;
+      }
     }
 
     @include respond(tab-land) {
@@ -108,7 +112,7 @@
     }
 
     &-text {
-      padding: 2rem 0;
+      padding: 2rem;
     }
   }
 

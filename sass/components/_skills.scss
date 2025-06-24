@@ -1,7 +1,7 @@
 .skills {
   grid-column: full-start/full-end;
   background-image: url(../../img/bg-pink.png);
-  padding: $section-big-space;
+  padding: $section-medium-space;
 
   grid-template-columns: 2rem repeat(6, 1fr) 2rem;
 
@@ -30,7 +30,8 @@
     }
 
     @include respond(big-desktop) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.1rem;
     }
   }
 
@@ -45,13 +46,14 @@
   }
 
   &__box {
-    // grid-column: 2 / span 1;
-
     display: grid;
     justify-items: center;
     text-align: center;
+    margin-bottom: 3.2rem;
 
-    margin: 3.2rem 0;
+    &--last {
+      margin-bottom: 0;
+    }
 
     @include respond(big-desktop) {
       grid-column: 1 / span 1;
@@ -90,6 +92,21 @@
       grid-column: 2 / span 1;
     }
   }
+
+  &__bracket {
+    background-image: url(../../img/bracket.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 110px;
+    display: none;
+    opacity: 0.5;
+
+    @include respond(big-desktop) {
+      display: block;
+      grid-column: 2 / span 1;
+      grid-row: 3 / span 3;
+    }
+  }
 }
 
 .progress {
@@ -106,11 +123,11 @@
 
   @include respond(big-desktop) {
     grid-row: 3 / span 3;
-    grid-column: 2 / span 1;
+    grid-column: 3 / span 1;
     align-items: start;
     justify-self: end;
 
-    width: 80%;
+    width: 100%;
   }
 
   &__heading {

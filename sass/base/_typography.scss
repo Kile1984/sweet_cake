@@ -3,7 +3,6 @@
 
   &__large {
     font-size: $font-heading;
-    margin: 2rem 0;
     text-shadow: $text-shadow;
 
     &--dark {
@@ -29,7 +28,6 @@
 
 .text {
   font-family: "Oswald", sans-serif;
-
   line-height: 22px;
 
   &__base {

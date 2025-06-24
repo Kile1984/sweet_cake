@@ -1,6 +1,6 @@
 .team {
   grid-column: center-start/center-end;
-  margin: $section-big-space;
+  margin: $section-medium-space;
 
   @include respond(tab-port) {
     grid-template-columns: 1fr 1fr;
@@ -11,7 +11,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @include respond(tab-land) {
+  @include respond(big-desktop) {
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -59,23 +59,11 @@
     border: 1px solid #e8e8e8;
   }
 
-  // &__icon {
-  //   width: 50px;
-  //   transform: translateY(-50%);
-  //   cursor: pointer;
-  //   transition: 0.5s;
-
-  //   &:hover {
-  //     transform: translateY(-50%) rotate(360deg);
-  //   }
-  // }
-
   .team__icon {
     width: 50px;
     height: 50px;
     display: inline-block;
     background-size: contain;
-    // background-repeat: no-repeat;
     background-position: center;
     margin: 0 0.5rem;
 
