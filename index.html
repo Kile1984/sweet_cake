@@ -12,50 +12,49 @@
     <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="./js/main.js"></script>
-
     <title>Sweet Cakes</title>
   </head>
   <body class="grid container">
-    <header class="header">
+    <header class="header" id="header">
       <nav class="nav">
         <ul class="nav__list grid">
           <li class="nav__item nav__item-row-1">
-            <a href="#" class="nav__link">Services</a>
+            <a href="#services" class="nav__link">Services</a>
           </li>
           <li class="nav__item nav__item-row-1">
-            <a href="#" class="nav__link">Testimonials</a>
+            <a href="#testimonials" class="nav__link">Testimonials</a>
           </li>
           <li class="nav__item nav__item-row-1">
-            <a href="#" class="nav__link">Work</a>
+            <a href="#works" class="nav__link">Work</a>
           </li>
           <li class="nav__item nav__item-row-1">
-            <a href="#" class="nav__link">Price</a>
+            <a href="#pricing" class="nav__link">Price</a>
           </li>
           <li class="nav__item nav__item-logo">
-            <a href="#" class="nav__link-logo">
+            <a href="#home" class="nav__link-logo">
               <img src="img/logo.png" alt="Logo" />
             </a>
           </li>
           <li class="nav__item nav__item-row-2">
-            <a href="#" class="nav__link">Our Team</a>
+            <a href="#team" class="nav__link">Our Team</a>
           </li>
           <li class="nav__item nav__item-row-2">
-            <a href="#" class="nav__link">Our Skill</a>
+            <a href="#skills" class="nav__link">Our Skill</a>
           </li>
           <li class="nav__item nav__item-row-2">
-            <a href="#" class="nav__link">Social</a>
+            <a href="#social" class="nav__link">Social</a>
           </li>
           <li class="nav__item nav__item-row-2">
-            <a href="#" class="nav__link">Contact</a>
+            <a href="#contact" class="nav__link">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <!-- SERVICES -->
-    <section class="services grid col-3-center">
+    <section class="services grid col-3-center" id="services">
       <h1
-        class="services__heading heading heading__large heading__large--dark text-center"
+        class="observe services__heading heading heading__large heading__large--dark text-center"
       >
         Services We Provide
       </h1>
@@ -131,7 +130,7 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="testimonials grid">
+    <section class="testimonials grid" id="testimonials">
       <div class="testimonials__wrapp grid">
         <img
           class="testimonials__topquote"
@@ -182,25 +181,34 @@
     </section>
 
     <!-- MY WORKS -->
-    <!-- Dodaj aria-label ili title na linkove unutar <a> zbog pristupačnosti. -->
-    <section class="works grid col-1">
+    <section class="works grid col-1" id="works">
       <h1
-        class="works__heading heading heading__large heading__large--dark text-center"
+        class="observe works__heading heading heading__large heading__large--dark text-center"
       >
         My Works
       </h1>
       <div class="works__divider divider"></div>
 
       <div class="works__button-group">
-        <button class="works__btn btn btn--pink">Show All</button>
-        <button class="works__btn btn btn--aquablue">Cupkakes</button>
-        <button class="works__btn btn btn--yellow">Cake Design</button>
-        <button class="works__btn btn btn--blue">Muffins</button>
-        <button class="works__btn btn btn--green">Dounuts</button>
+        <button class="works__btn btn btn--pink" data-type="all">
+          Show All
+        </button>
+        <button class="works__btn btn btn--aquablue" data-type="cupcake">
+          Cupkakes
+        </button>
+        <button class="works__btn btn btn--yellow" data-type="cake">
+          Cake Design
+        </button>
+        <button class="works__btn btn btn--blue" data-type="muffins">
+          Muffins
+        </button>
+        <button class="works__btn btn btn--green" data-type="donuts">
+          Dounuts
+        </button>
       </div>
 
-      <div class="works__image-gallery">
-        <figure class="works__figure">
+      <div class="works__image-gallery grid">
+        <!-- <figure class="works__figure">
           <a href="#" class="works__link">
             <img class="works__img" src="./img/my_works_1.jpg" alt="Cake" />
           </a>
@@ -317,15 +325,15 @@
             </p>
             <div class="works__border-bottom"></div>
           </figcaption>
-        </figure>
+        </figure> -->
       </div>
     </section>
 
     <!-- PRICING -->
-    <section class="pricing grid">
+    <section class="pricing grid" id="pricing">
       <div class="pricing__wrapp grid">
         <h1
-          class="pricing__heading heading heading__large heading__large--white"
+          class="observe pricing__heading heading heading__large heading__large--white"
         >
           Our Prices
         </h1>
@@ -405,7 +413,7 @@
           </div>
         </div>
 
-        <div class="pricing__box">
+        <div class="pricing__box mb-tab-port">
           <div class="pricing__img">
             <img src="./img/Price_3.png" alt="Price" />
           </div>
@@ -442,7 +450,7 @@
           </div>
         </div>
 
-        <div class="pricing__box">
+        <div class="pricing__box mb-tab-port">
           <div class="pricing__img">
             <img src="./img/Price_4.png" alt="Price" />
           </div>
@@ -482,9 +490,9 @@
     </section>
 
     <!-- TEAM -->
-    <section class="team grid col-1">
+    <section class="team grid col-1" id="team">
       <h1
-        class="works__heading heading heading__large heading__large--dark text-center"
+        class="observe works__heading heading heading__large heading__large--dark text-center"
       >
         Our Team
       </h1>
@@ -588,10 +596,10 @@
     </section>
 
     <!-- OUR SKILLS -->
-    <section class="skills grid">
+    <section class="skills grid" id="skills">
       <div class="skills__wrap grid">
         <h1
-          class="skills__heading heading heading__large heading__large--dark text-center"
+          class="observe skills__heading heading heading__large heading__large--dark text-center"
         >
           Our Skills
         </h1>
@@ -621,7 +629,7 @@
           </p>
         </div>
 
-        <div class="skills__box">
+        <div class="skills__box skills__box--last">
           <img src="./img/skills_3.png" alt="Skills" class="skills__img" />
           <h2 class="skills__heading-box heading heading__small">
             Creative Cake Design
@@ -632,6 +640,8 @@
             enim vel leo
           </p>
         </div>
+
+        <div class="skills__bracket"></div>
 
         <div class="progress">
           <div class="progress__box grid">
@@ -703,12 +713,12 @@
     </section>
 
     <!-- SOCIAL -->
-    <section class="social grid col-3-center">
-      <h2
-        class="social__heading heading heading__large heading__large--dark text-center"
+    <section class="social grid col-3-center" id="social">
+      <h1
+        class="observe social__heading heading heading__large heading__large--dark text-center"
       >
         Follow Us
-      </h2>
+      </h1>
       <div class="social__divider divider"></div>
 
       <a class="social__link" href="#">
@@ -725,7 +735,7 @@
       </a>
     </section>
 
-    <footer class="footer grid">
+    <footer class="observe footer grid" id="contact">
       <div class="footer__marker">
         <h2 class="footer__heading heading heading__small heading__small--dark">
           Sweet Cake
