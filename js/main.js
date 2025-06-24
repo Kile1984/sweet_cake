@@ -147,7 +147,7 @@ buttons.forEach((btn) => {
         fig.style.display = "none";
       }, 100);
 
-      if (selectedType === type) {
+      if (selectedType === type || selectedType === "all") {
         console.log(fig);
         fig.classList.add("show");
         fig.classList.remove("hide");
