@@ -21,35 +21,34 @@ heading.forEach((sec) => {
 });
 
 // smooth scroll
-const thresholdValue = window.innerWidth <= 900 ? 0.1 : 0.4;
+// const thresholdValue = window.innerWidth <= 900 ? 0.1 : 0.4;
 
-const smoothScrollObserver = new IntersectionObserver(
-  function (entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-        });
+// const smoothScrollObserver = new IntersectionObserver(
+//   function (entries) {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         console.log(entry.isIntersecting);
+//         navLinks.forEach((link) => {
+//           link.classList.remove("active");
+//         });
 
-        const id = entry.target.id;
+//         const id = entry.target.id;
 
-        const activeLink = document.querySelector(`a[href="#${id}"]`);
+//         const activeLink = document.querySelector(`a[href="#${id}"]`);
 
-        if (activeLink) activeLink.classList.add("active");
+//         if (activeLink) activeLink.classList.add("active");
+//       }
+//     });
+//   },
+//   {
+//     // threshold: 0.4,
+//     threshold: thresholdValue,
+//   }
+// );
 
-        console.log(activeLink);
-      }
-    });
-  },
-  {
-    // threshold: 0.4,
-    threshold: thresholdValue,
-  }
-);
-
-sections.forEach((section) => {
-  smoothScrollObserver.observe(section);
-});
+// sections.forEach((section) => {
+//   smoothScrollObserver.observe(section);
+// });
 
 // galery
 const cakes = [
