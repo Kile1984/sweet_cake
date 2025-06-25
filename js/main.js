@@ -21,6 +21,8 @@ heading.forEach((sec) => {
 });
 
 // smooth scroll
+const thresholdValue = window.innerWidth <= 900 ? 0.1 : 0.4;
+
 const smoothScrollObserver = new IntersectionObserver(
   function (entries) {
     entries.forEach((entry) => {
@@ -34,12 +36,14 @@ const smoothScrollObserver = new IntersectionObserver(
         const activeLink = document.querySelector(`a[href="#${id}"]`);
 
         if (activeLink) activeLink.classList.add("active");
+
         console.log(activeLink);
       }
     });
   },
   {
-    threshold: 0.4,
+    // threshold: 0.4,
+    threshold: thresholdValue,
   }
 );
 
