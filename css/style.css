@@ -124,6 +124,10 @@ section .observe.visible {
   grid-template-columns: 2rem 2fr 2rem;
 }
 
+.flex {
+  display: flex;
+}
+
 @media only screen and (min-width: 37.5em) {
   .mb-tab-port {
     margin: 0 !important;
@@ -830,6 +834,7 @@ section .observe.visible {
 .social {
   grid-column: full-start/full-end;
   margin: 6.4rem 0;
+  padding: 9.6rem 0;
 }
 @media only screen and (min-width: 37.5em) {
   .social {
@@ -877,6 +882,7 @@ section .observe.visible {
 
 .header {
   grid-column: center-start/center-end;
+  position: relative;
 }
 
 .nav__list {
