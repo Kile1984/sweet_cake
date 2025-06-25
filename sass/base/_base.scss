@@ -64,18 +64,3 @@ section .observe.visible {
 .nav__link.active {
   opacity: 0.5;
 }
-
-// .works__figure.show {
-//   transition: all 0.5s;
-//   opacity: 1;
-//   visibility: visible;
-//   transform: translateY(0);
-// }
-
-// .works__figure.hide {
-//   transition: all 0.5s;
-//   opacity: 0;
-//   visibility: hidden;
-//   transform: translateY(-100%);
-//   pointer-events: none;
-// }

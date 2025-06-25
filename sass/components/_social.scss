@@ -1,6 +1,7 @@
 .social {
   grid-column: full-start/full-end;
   margin: $section-medium-space;
+  // padding: $section-big-space;
 
   @include respond(tab-port) {
     grid-template-columns: repeat(4, 1fr);

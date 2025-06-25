@@ -22,6 +22,10 @@
   grid-template-columns: 2rem 2fr 2rem;
 }
 
+.flex {
+  display: flex;
+}
+
 .mb-tab-port {
   @include respond(tab-port) {
     margin: 0 !important;

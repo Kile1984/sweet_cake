@@ -1,5 +1,11 @@
 .header {
   grid-column: center-start/center-end;
+  position: relative;
+
+  // position: fixed;
+  // background-color: green;
+  // z-index: 999;
+  // height: 100%;
 }
 
 .nav {
